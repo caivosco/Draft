@@ -1,0 +1,37 @@
+import os
+os.getcwd()
+is.listdir('.')
+os.listdir('.')
+os.system('ls')
+os.systems('pwd')
+os.system('pwd')
+os.system('whois')
+os.system('who')
+from pyspark.ml.linalg import Vectors
+from pyspark.ml.feature import VectorAssembler
+from pyspark.ml.clustering import KMeans
+cluster_df = spark.read_csv('clustering_dataset.csv', header=True, inferSchema=True)
+cluster_df = spark.read.csv('clustering_dataset.csv', header=True, inferSchema=True)
+cluster_df
+cluster_df.head()
+cluster_df.show(5)
+vectorassembler = VectorAssembler(inputCols=['col1', 'col2', 'col3'], outputCol='features')
+vcluster_df = vectorassembler.transform(cluster_df)
+vcluster_df.show(3)
+kmeans = KMeans().setK(3)
+kmeans = kmeans.setSeed(123)
+kmodel = kmeans.fit(vcluster_df)
+kmodel
+kmodel()
+kmodel.clusterCenters()
+from pyspark.ml.clustering import BisectingKMeans
+bkmeans = BisectingKmeans().setk(3)
+bkmeans = BisectingKMeans().setk(3)
+bkmeans = BisectingKMeans().setK(3)
+bkmeans = bkmeans.setSeed(1)
+bkmodel = bkmenas.fit(vcluster_df)
+bkmodel = bkmeans.fit(vcluster_df)
+bkmodel.clusterCenters()
+kmodel.clusterCenters()
+import readline
+readline.write_history_file('pyspark_clustering')

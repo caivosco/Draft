@@ -1,0 +1,20 @@
+import os
+os.getcwd()
+os.listdir()
+os.listdir('.')
+emp_df = spark.read.csv('employee.txt', header=True)
+emp_Df
+emp_df
+emp_df.schema
+emp_df.printSchema()
+history
+:help
+help
+:history
+%save my_session0 01-10
+%history my_session0 01-10
+import readline
+readline.write_history_file('./session01')
+getcwd()
+os.getcwd()
+readline.write_history_file('./session01')
